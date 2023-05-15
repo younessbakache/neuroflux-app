@@ -1,0 +1,13 @@
+version:  "3.7"
+
+services:
+  neuroflux:
+    container_name: neurofluxapp
+    image: neuroflux/app
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /c/Users/Yunes/Desktop/Neuroflux:/data
