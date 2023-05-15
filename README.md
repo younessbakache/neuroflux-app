@@ -6,7 +6,6 @@ This application uses deep learning to predict Neuroflux disorder phases based o
 
 - [Application](#application)
   - [main.py](#mainpy)
-- [Packaging](#packaging)
   - [Dockerfile](#dockerfile)
   - [docker-compose.yml](#docker-composeyml)
 - [Dockerization](#dockerization)
@@ -22,7 +21,6 @@ The `main.py` file contains the Python code for the deep learning models. It con
 - `BaseModel`: This is the base class for the models. It defines the common functionalities like data loading, model evaluation, and prediction.
 - `Model1`: This class inherits from `BaseModel` and implements the `train` method using a pre-trained ResNet50 model.
 - `Model2`: This class also inherits from `BaseModel` but it implements the `train` method using a custom Convolutional Neural Network (CNN).
-## Packaging
 ### Dockerfile
 The Dockerfile defines the environment in which the application runs. It starts from a Python 3.8 image, installs the necessary dependencies from the requirements.txt file, copies the application files into the image, and finally runs the main.py script when a container is launched from the image.
 
