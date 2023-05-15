@@ -1,6 +1,6 @@
-# Neuroflux Machine Learning Application
+# Neuroflux deep Learning Application
 
-This application uses machine learning to predict Neuroflux disorder phases based on MRI scans. It provides two models for this purpose, both defined in the `main.py` script.
+This application uses deep learning to predict Neuroflux disorder phases based on MRI scans. It provides two models for this purpose, both defined in the `main.py` script.
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ The Dockerfile defines the environment in which the application runs. It starts 
 The docker-compose.yml file is used to define and run the multi-container Docker application. It builds the Docker image using the Dockerfile, maps port 5000 of the container to port 5000 of the host, and mounts the data directory from the host to the data directory in the container.
 
 
-##Dockerization
+## Dockerization
 Dockerization makes it easy to create a reproducible environment for the application. The application and its dependencies are packaged into a Docker image, which can be run consistently on any platform that supports Docker.
 
 The Docker image for this application is defined in the Dockerfile. To build the image, navigate to the project directory and run:
