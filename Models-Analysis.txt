@@ -1,0 +1,24 @@
+Model1:
+- Architecture: Model1 uses the ResNet50 architecture as a base model with the pre-trained weights from ImageNet. It adds a global average pooling layer, a dense layer with 1024 units, and a final dense layer with 5 units for classification.
+- Training: The model is trained using the Adam optimizer with a learning rate of 0.001 and categorical cross-entropy loss. It is trained for 10 epochs.
+- Evaluation: The model is evaluated using the evaluate method, which loads the saved model and calculates the loss and accuracy on the validation set.
+- Prediction: The predict method loads the saved model, preprocesses the input image, and predicts the class label of the input image.
+
+Model2:
+- Architecture: Model2 is a sequential model with a simpler architecture. It consists of two convolutional layers with max pooling, followed by a flatten layer, a dense layer with 128 units, a dropout layer, and a final dense layer with 5 units for classification.
+- Training: The model is trained using the Adam optimizer with a learning rate of 0.001 and categorical cross-entropy loss. It is trained for 10 epochs.
+- Evaluation: The model is evaluated similarly to Model1.
+- Prediction: The prediction method is the same as in Model1.
+
+Analysis of Model1:
+- Test loss: 1.48522366669002
+- Test accuracy: 0.4766666666525863
+
+Analysis of Model2:
+- Test loss: 1.409552812576294
+- Test accuracy: 0.4444444477558136
+
+Improvements for the models:
+1. Data augmentation: Applying additional data augmentation techniques, such as rotation, scaling, and shearing, can help increase the model's ability to generalize to unseen data.
+2. Hyperparameter tuning: Experimenting with different learning rates, optimizer choices, batch sizes, and number of epochs can improve the model's performance. Techniques like learning rate schedules or early stopping can also be employed.
+3. Model architecture modifications: Both models can benefit from architectural changes. For Model1, fine-tuning some of the layers in the base model instead of freezing them may improve performance. For Model2, increasing the depth of the network or using a more sophisticated architecture, such as a pre-trained model like VGG16 or InceptionV3, may yield better results.
